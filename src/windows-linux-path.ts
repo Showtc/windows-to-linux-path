@@ -6,7 +6,7 @@ interface PathArgument {
 
 export default async function main(props: LaunchProps<{ arguments: PathArgument }>) {
   let { path } = props.arguments;
-  
+
   // Condition to test if a path is a Windows type path
   if (/^[A-Za-z]:\\/.test(path) != true) {
     await showToast({
